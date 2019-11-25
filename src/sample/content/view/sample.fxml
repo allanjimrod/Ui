@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.content.controller.Controller">
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="303.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+        <children>
+            <AnchorPane layoutX="-5.0" layoutY="-5.0" prefHeight="361.0" prefWidth="303.0" style="-fx-background-color: #C36B51;">
+                <children>
+                    <TextField fx:id="txt_result" layoutX="14.0" layoutY="24.0" prefHeight="42.0" prefWidth="250.0" style="-fx-text-fill: #ac2310; -fx-background-color: #E8D8D5;">
+                        <font>
+                            <Font name="Ubuntu" size="20.0" />
+                        </font>
+                    </TextField>
+                    <Pane layoutY="82.0" prefHeight="282.0" prefWidth="308.0" style="-fx-background-color: #B7C4CD;">
+                        <children>
+                            <Pane prefHeight="51.0" prefWidth="308.0" style="-fx-background-color: #0A629E;">
+                                <children>
+                                    <Button fx:id="btn_deleteall" mnemonicParsing="false" onAction="#DeleteAll" prefHeight="51.0" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="C" textAlignment="CENTER" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_division" layoutX="77.0" mnemonicParsing="false" onAction="#setDivision" prefHeight="51.0" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="/" textAlignment="CENTER" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_multiplication" layoutX="154.0" mnemonicParsing="false" onAction="#setMultiplication" prefHeight="51.0" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="X" textFill="#ac2310">
+                                        <font>
+                                            <Font size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_delete" layoutX="231.0" mnemonicParsing="false" onAction="#Delete" prefHeight="51.0" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="Ce" textFill="#ac2310">
+                                        <font>
+                                            <Font size="20.0" />
+                                        </font>
+                                    </Button>
+                                </children>
+                            </Pane>
+                            <Pane layoutY="51.0" prefHeight="231.0" prefWidth="77.0" style="-fx-background-color: #58560D;">
+                                <children>
+                                    <Button fx:id="btn_seven" mnemonicParsing="false" onAction="#setSeven" prefHeight="57.75" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="7" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_four" layoutY="58.0" mnemonicParsing="false" onAction="#setFour" prefHeight="57.75" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="4" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_one" layoutY="116.0" mnemonicParsing="false" onAction="#setOne" prefHeight="57.75" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="1" textFill="#ac2310">
+                                        <font>
+                                            <Font size="20.0" />
+                                        </font>
+                                    </Button>
+                                </children>
+                            </Pane>
+                            <Pane layoutX="77.0" layoutY="51.0" prefHeight="231.0" prefWidth="77.0" style="-fx-background-color: #58560D;">
+                                <children>
+                                    <Button fx:id="btn_eight" mnemonicParsing="false" onAction="#setEight" prefHeight="57.75" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="8" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_zero" layoutX="-73.0" layoutY="174.0" mnemonicParsing="false" onAction="#setZero" prefHeight="62.0" prefWidth="150.0" style="-fx-background-color: #E8D8D5;" text="0" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_two" layoutY="116.0" mnemonicParsing="false" onAction="#setTwo" prefHeight="57.75" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="2" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_five" layoutY="58.0" mnemonicParsing="false" onAction="#setFive" prefHeight="57.75" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="5" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                </children>
+                            </Pane>
+                            <Pane layoutX="154.0" layoutY="51.0" prefHeight="231.0" prefWidth="77.0" style="-fx-background-color: #58560D;">
+                                <children>
+                                    <Button fx:id="btn_nine" mnemonicParsing="false" onAction="#setNine" prefHeight="57.75" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="9" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_six" layoutY="58.0" mnemonicParsing="false" onAction="#setSix" prefHeight="57.75" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="6" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_three" layoutY="116.0" mnemonicParsing="false" onAction="#setThree" prefHeight="57.75" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="3" textFill="#ac2310">
+                                        <font>
+                                            <Font size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_point" layoutY="174.0" mnemonicParsing="false" onAction="#setPoint" prefHeight="62.0" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="." textFill="#ac2310">
+                                        <font>
+                                            <Font size="20.0" />
+                                        </font>
+                                    </Button>
+                                </children>
+                            </Pane>
+                            <Pane layoutX="231.0" layoutY="51.0" prefHeight="231.0" prefWidth="77.0" style="-fx-background-color: #58560D;">
+                                <children>
+                                    <Button fx:id="btn_subtraction" mnemonicParsing="false" onAction="#setSubtraction" prefHeight="70.0" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="-" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_sum" layoutY="65.0" mnemonicParsing="false" onAction="#setSum" onKeyPressed="#setSum" prefHeight="62.0" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="+" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="btn_result" layoutY="127.0" mnemonicParsing="false" onAction="#getResult" prefHeight="108.0" prefWidth="77.0" style="-fx-background-color: #E8D8D5;" text="=" textFill="#ac2310">
+                                        <font>
+                                            <Font name="Ubuntu" size="20.0" />
+                                        </font>
+                                    </Button>
+                                </children>
+                            </Pane>
+                        </children>
+                    </Pane>
+                </children>
+            </AnchorPane>
+        </children>
+    </AnchorPane>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>

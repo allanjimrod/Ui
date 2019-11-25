@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="springboot_calculator">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../springboot_calculator/out/artifacts/springboot_calculator_jar/springboot_calculator.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
