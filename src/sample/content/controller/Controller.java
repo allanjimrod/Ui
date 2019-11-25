@@ -8,6 +8,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 
 public class Controller {
 
@@ -16,110 +21,129 @@ public class Controller {
     private String numero2;
     private String signo;
 
-    @FXML private Button btn_result;
-    @FXML private Button btn_delete;
-    @FXML private Button btn_deleteall;
-    @FXML private Button btn_sum;
-    @FXML private Button btn_subtraction;
-    @FXML private Button btn_multiplication;
-    @FXML private Button btn_division;
-    @FXML private Button btn_nine;
-    @FXML private Button btn_eight;
-    @FXML private Button btn_seven;
-    @FXML private Button btn_six;
-    @FXML private Button btn_five;
-    @FXML private Button btn_four;
-    @FXML private Button btn_three;
-    @FXML private Button btn_two;
-    @FXML private Button btn_one;
-    @FXML private Button btn_zero;
-    @FXML private Button btn_point;
+    @FXML
+    private Button btn_result;
+    @FXML
+    private Button btn_delete;
+    @FXML
+    private Button btn_deleteall;
+    @FXML
+    private Button btn_sum;
+    @FXML
+    private Button btn_subtraction;
+    @FXML
+    private Button btn_multiplication;
+    @FXML
+    private Button btn_division;
+    @FXML
+    private Button btn_nine;
+    @FXML
+    private Button btn_eight;
+    @FXML
+    private Button btn_seven;
+    @FXML
+    private Button btn_six;
+    @FXML
+    private Button btn_five;
+    @FXML
+    private Button btn_four;
+    @FXML
+    private Button btn_three;
+    @FXML
+    private Button btn_two;
+    @FXML
+    private Button btn_one;
+    @FXML
+    private Button btn_zero;
+    @FXML
+    private Button btn_point;
 
 
-    @FXML private TextField txt_result;
+    @FXML
+    private TextField txt_result;
 
-    public void setNine(ActionEvent event){
+    public void setNine(ActionEvent event) {
         btn_nine.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(javafx.event.ActionEvent actionEvent) {
+            public void handle(ActionEvent actionEvent) {
                 txt_result.setText(txt_result.getText() + "9");
             }
         });
     }
 
-    public void setEight(ActionEvent event){
+    public void setEight(ActionEvent event) {
         btn_eight.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(javafx.event.ActionEvent actionEvent) {
+            public void handle(ActionEvent actionEvent) {
                 txt_result.setText(txt_result.getText() + "8");
             }
         });
     }
 
-    public void setSeven(ActionEvent event){
+    public void setSeven(ActionEvent event) {
         btn_seven.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(javafx.event.ActionEvent actionEvent) {
+            public void handle(ActionEvent actionEvent) {
                 txt_result.setText(txt_result.getText() + "7");
             }
         });
     }
 
-    public void setSix(ActionEvent event){
+    public void setSix(ActionEvent event) {
         btn_six.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(javafx.event.ActionEvent actionEvent) {
+            public void handle(ActionEvent actionEvent) {
                 txt_result.setText(txt_result.getText() + "6");
             }
         });
     }
 
-    public void setFive(ActionEvent event){
+    public void setFive(ActionEvent event) {
         btn_five.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(javafx.event.ActionEvent actionEvent) {
+            public void handle(ActionEvent actionEvent) {
                 txt_result.setText(txt_result.getText() + "5");
             }
         });
     }
 
-    public void setFour(ActionEvent event){
+    public void setFour(ActionEvent event) {
         btn_four.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(javafx.event.ActionEvent actionEvent) {
+            public void handle(ActionEvent actionEvent) {
                 txt_result.setText(txt_result.getText() + "4");
             }
         });
     }
 
-    public void setThree(ActionEvent event){
+    public void setThree(ActionEvent event) {
         btn_three.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(javafx.event.ActionEvent actionEvent) {
+            public void handle(ActionEvent actionEvent) {
                 txt_result.setText(txt_result.getText() + "3");
             }
         });
     }
 
-    public void setTwo(ActionEvent event){
+    public void setTwo(ActionEvent event) {
         btn_two.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(javafx.event.ActionEvent actionEvent) {
+            public void handle(ActionEvent actionEvent) {
                 txt_result.setText(txt_result.getText() + "2");
             }
         });
     }
 
-    public void setOne(ActionEvent event){
+    public void setOne(ActionEvent event) {
         btn_one.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(javafx.event.ActionEvent actionEvent) {
+            public void handle(ActionEvent actionEvent) {
                 txt_result.setText(txt_result.getText() + "1");
             }
         });
     }
 
-    public void setZero(ActionEvent event){
+    public void setZero(ActionEvent event) {
         btn_zero.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(javafx.event.ActionEvent actionEvent) {
@@ -128,11 +152,11 @@ public class Controller {
         });
     }
 
-    private boolean existePunto(String cadena){
+    private boolean existePunto(String cadena) {
         boolean respuesta = false;
 
-        for (int i = 0; i < cadena.length();i++){
-            if (cadena.substring(i, i+1).equals(".")){
+        for (int i = 0; i < cadena.length(); i++) {
+            if (cadena.substring(i, i + 1).equals(".")) {
                 respuesta = true;
                 break;
             }
@@ -140,16 +164,15 @@ public class Controller {
         return respuesta;
     }
 
-    public void setPoint(ActionEvent event){
+    public void setPoint(ActionEvent event) {
         btn_point.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(javafx.event.ActionEvent actionEvent) {
 
-                if(txt_result.getText().length() <= 0){
+                if (txt_result.getText().length() <= 0) {
                     txt_result.setText("0.");
-                }
-                else {
-                    if(!existePunto(txt_result.getText()))
+                } else {
+                    if (!existePunto(txt_result.getText()))
                         txt_result.setText(txt_result.getText() + ".");
                 }
 
@@ -158,37 +181,50 @@ public class Controller {
     }
 
 
+    public String llamarApi(String pUrl) {
+        String respuesta = "";
+        try {
+            URL url = new URL(pUrl);//your url i.e fetch data from .
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setRequestProperty("Accept", "application/json");
+            if (conn.getResponseCode() != 200) {
+                throw new RuntimeException("Failed : HTTP Error code : "
+                        + conn.getResponseCode());
+            }
+            InputStreamReader in = new InputStreamReader(conn.getInputStream());
+            BufferedReader br = new BufferedReader(in);
+            String output;
 
+            while ((output = br.readLine()) != null) {
+                System.out.println(output);
+                respuesta = output;
+            }
+            conn.disconnect();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return respuesta;
+    }
 
     private String calcular(String numero1, String numero2, String signo) throws Exception {
 
         Double respuesta = 0.0;
-        String resultado;
+        String resultado = "";
 
         double num1 = Double.parseDouble(numero1);
         double num2 = Double.parseDouble(numero2);
 
-        for (int i = 0; i < signo.length();i++){
-            if (signo.equals("+")){
+        if (signo.equals("+")) {
 
-                respuesta = cc.getOperationSum(num1, num2);
-                break;
-            }
-            else if(signo.equals("-")){
-                respuesta = cc.getOperationSubtraction(num1, num2);
-                break;
-            }
-            else if (signo.equals("/")){
-                respuesta = cc.getOperationDivision(num1, num2);
-                break;
-            }
-            else if (signo.equals("*")){
-                respuesta = cc.getOperationMultiplication(num1, num2);
-                break;
-            }
+            return resultado = llamarApi("http://localhost:8080/calculator/getresult/sum/" + num1 + "/" + num2);
+        } else if (signo.equals("-")) {
+            return resultado = llamarApi("http://localhost:8080/calculator/getresult/subtraction/" + num1 + "/" + num2);
+        } else if (signo.equals("/")) {
+            return resultado = llamarApi("http://localhost:8080/calculator/getresult/division/" + num1 + "/" + num2);
+        } else if (signo.equals("*")) {
+            return resultado = llamarApi("http://localhost:8080/calculator/getresult/multiplication/" + num1 + "/" + num2);
         }
-        resultado = respuesta.toString();
-
         return resultado;
     }
 
@@ -203,7 +239,7 @@ public class Controller {
                     txt_result.setText("");
                 }
 
-            }
+            };
         });
     }
 
